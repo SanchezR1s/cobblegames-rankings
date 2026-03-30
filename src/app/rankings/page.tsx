@@ -72,12 +72,13 @@ async function DuelRankingsContent() {
   }
 }
 
-export default function RankingsPage({
+export default async function RankingsPage({
   searchParams,
 }: {
-  searchParams: { tab?: string };
+  searchParams: Promise<{ tab?: string }>;
 }) {
-  const tab = searchParams?.tab === "duels" ? "duels" : "hg";
+  const { tab: tabParam } = await searchParams;
+  const tab = tabParam === "duels" ? "duels" : "hg";
 
   return (
     <div className="min-h-screen">

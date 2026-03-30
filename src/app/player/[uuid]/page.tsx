@@ -29,11 +29,12 @@ const UUID_REGEX = /^[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f
 export async function generateMetadata({
   params,
 }: {
-  params: { uuid: string };
+  params: Promise<{ uuid: string }>;
 }): Promise<Metadata> {
-  if (!UUID_REGEX.test(params.uuid)) return { title: "Jugador no encontrado" };
+  const { uuid } = await params;
+  if (!UUID_REGEX.test(uuid)) return { title: "Jugador no encontrado" };
   try {
-    const player = await getPlayer(params.uuid);
+    const player = await getPlayer(uuid);
     return {
       title: player.username,
       description: `Estadísticas de ${player.username} en Cobblegames`,
@@ -133,23 +134,26 @@ export default async function PlayerPage({
   params,
   searchParams,
 }: {
-  params: { uuid: string };
-  searchParams: { tab?: string };
+  params: Promise<{ uuid: string }>;
+  searchParams: Promise<{ tab?: string }>;
 }) {
-  if (!UUID_REGEX.test(params.uuid)) notFound();
+  const { uuid } = await params;
+  const { tab: tabParam } = await searchParams;
+
+  if (!UUID_REGEX.test(uuid)) notFound();
 
   let player;
   try {
-    player = await getPlayer(params.uuid);
+    player = await getPlayer(uuid);
   } catch {
     notFound();
   }
 
-  const tab = searchParams?.tab === "duels" ? "duels" : "hg";
+  const tab = tabParam === "duels" ? "duels" : "hg";
 
   const [hgMatches, duelMatches] = await Promise.allSettled([
-    getPlayerHgMatches(params.uuid, 20, 0),
-    getPlayerDuelMatches(params.uuid, 20, 0),
+    getPlayerHgMatches(uuid, 20, 0),
+    getPlayerDuelMatches(uuid, 20, 0),
   ]);
 
   const hgMatchList = hgMatches.status === "fulfilled" ? hgMatches.value.data : [];
