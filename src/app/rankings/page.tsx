@@ -101,7 +101,6 @@ export default async function RankingsPage({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-6">
         {/* Summary stats */}
         <Suspense fallback={null}>
-          {/* @ts-expect-error Async Server Component */}
           <SummarySection />
         </Suspense>
 
@@ -112,12 +111,10 @@ export default async function RankingsPage({
           <div className="animate-fade-in">
             {tab === "hg" ? (
               <Suspense fallback={<SkeletonTable rows={20} />}>
-                {/* @ts-expect-error Async Server Component */}
                 <HgRankingsContent />
               </Suspense>
             ) : (
               <Suspense fallback={<SkeletonTable rows={20} />}>
-                {/* @ts-expect-error Async Server Component */}
                 <DuelRankingsContent />
               </Suspense>
             )}
