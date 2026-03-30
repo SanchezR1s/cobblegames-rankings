@@ -1,4 +1,4 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://193.31.31.225:3226";
+const API_BASE = process.env.API_URL || "http://193.31.31.225:3226";
 
 export interface HgPlayerStats {
   uuid: string;

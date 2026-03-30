@@ -24,11 +24,14 @@ import {
 
 export const revalidate = 60;
 
+const UUID_REGEX = /^[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12}$/i;
+
 export async function generateMetadata({
   params,
 }: {
   params: { uuid: string };
 }): Promise<Metadata> {
+  if (!UUID_REGEX.test(params.uuid)) return { title: "Jugador no encontrado" };
   try {
     const player = await getPlayer(params.uuid);
     return {
@@ -133,6 +136,8 @@ export default async function PlayerPage({
   params: { uuid: string };
   searchParams: { tab?: string };
 }) {
+  if (!UUID_REGEX.test(params.uuid)) notFound();
+
   let player;
   try {
     player = await getPlayer(params.uuid);
