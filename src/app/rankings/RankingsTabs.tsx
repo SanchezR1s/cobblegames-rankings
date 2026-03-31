@@ -15,7 +15,7 @@ export default function RankingsTabs({ activeTab }: RankingsTabsProps) {
         className={cn(
           "px-4 py-2 text-sm font-medium rounded-t-lg border-b-2 transition-colors -mb-px",
           activeTab === "hg"
-            ? "border-accent-purple text-accent-purple bg-accent-purple/5"
+            ? "border-accent-cyan text-accent-cyan bg-accent-cyan/5"
             : "border-transparent text-gray-400 hover:text-white hover:bg-bg-hover"
         )}
       >

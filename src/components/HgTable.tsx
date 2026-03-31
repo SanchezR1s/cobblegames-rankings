@@ -46,7 +46,7 @@ export default function HgTable({ players, offset = 0 }: HgTableProps) {
                   >
                     <PlayerAvatar uuid={p.uuid} username={p.username} size={32} />
                     <div className="flex flex-col">
-                      <span className="font-medium text-white group-hover:text-accent-purple transition-colors">
+                      <span className="font-medium text-white group-hover:text-accent-cyan transition-colors">
                         {p.username}
                       </span>
                       <span className="text-[11px] text-gray-500 hidden sm:block">

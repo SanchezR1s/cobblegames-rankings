@@ -19,10 +19,10 @@ export default function Navbar() {
           href="/"
           className="flex items-center gap-2 font-bold text-base shrink-0 hover:opacity-80 transition-opacity"
         >
-          <div className="w-7 h-7 rounded-lg bg-accent-purple/20 border border-accent-purple/40 flex items-center justify-center text-accent-purple text-sm font-bold">
+          <div className="w-7 h-7 rounded-lg bg-accent-cyan/20 border border-accent-cyan/40 flex items-center justify-center text-accent-cyan text-sm font-bold">
             C
           </div>
-          <span className="hidden sm:block gradient-text">Cobblegames</span>
+          <span className="hidden sm:block text-accent-cyan font-bold tracking-wider uppercase text-sm">Cobblemon Arena</span>
         </Link>
 
         {/* Nav links */}
@@ -36,7 +36,7 @@ export default function Navbar() {
                 className={cn(
                   "px-3 py-1.5 rounded-lg text-sm font-medium transition-colors",
                   active
-                    ? "bg-accent-purple/15 text-accent-purple"
+                    ? "bg-accent-cyan/15 text-accent-cyan"
                     : "text-gray-400 hover:text-white hover:bg-bg-hover"
                 )}
               >

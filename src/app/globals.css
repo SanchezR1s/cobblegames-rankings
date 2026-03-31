@@ -18,10 +18,15 @@
   body {
     @apply bg-bg text-white font-sans;
     min-height: 100vh;
+    /* Scattered diagonal line marks — signature cobblemonarena.com background */
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cline x1='38' y1='12' x2='52' y2='30' stroke='rgba(0,212,232,0.18)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='120' y1='55' x2='132' y2='38' stroke='rgba(0,212,232,0.15)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='215' y1='22' x2='228' y2='8' stroke='rgba(0,212,232,0.17)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='310' y1='40' x2='326' y2='56' stroke='rgba(0,212,232,0.14)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='370' y1='18' x2='385' y2='6' stroke='rgba(0,212,232,0.16)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='18' y1='110' x2='6' y2='126' stroke='rgba(0,212,232,0.15)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='88' y1='148' x2='104' y2='134' stroke='rgba(0,212,232,0.18)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='180' y1='130' x2='194' y2='118' stroke='rgba(0,212,232,0.14)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='265' y1='155' x2='280' y2='142' stroke='rgba(0,212,232,0.17)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='345' y1='120' x2='358' y2='108' stroke='rgba(0,212,232,0.15)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='50' y1='230' x2='38' y2='246' stroke='rgba(0,212,232,0.16)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='142' y1='218' x2='156' y2='232' stroke='rgba(0,212,232,0.14)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='235' y1='242' x2='248' y2='228' stroke='rgba(0,212,232,0.18)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='320' y1='260' x2='308' y2='276' stroke='rgba(0,212,232,0.15)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='388' y1='235' x2='400' y2='222' stroke='rgba(0,212,232,0.16)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='22' y1='340' x2='36' y2='326' stroke='rgba(0,212,232,0.17)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='108' y1='358' x2='122' y2='372' stroke='rgba(0,212,232,0.14)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='195' y1='330' x2='210' y2='318' stroke='rgba(0,212,232,0.16)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='275' y1='380' x2='290' y2='366' stroke='rgba(0,212,232,0.15)' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='360' y1='345' x2='375' y2='358' stroke='rgba(0,212,232,0.18)' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-size: 400px 400px;
+    background-repeat: repeat;
   }
 
   ::selection {
-    @apply bg-accent-purple/30 text-white;
+    @apply bg-accent-cyan/30 text-white;
   }
 
   ::-webkit-scrollbar {
@@ -38,7 +43,7 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-accent-purple/50;
+    @apply bg-accent-cyan/50;
   }
 }
 
@@ -52,7 +57,7 @@
   }
 
   .btn-primary {
-    @apply bg-accent-purple hover:bg-accent-purple/80 text-white font-medium px-4 py-2 rounded-lg transition-colors;
+    @apply bg-accent-cyan hover:bg-accent-cyan/80 text-black font-medium px-4 py-2 rounded-lg transition-colors;
   }
 
   .btn-ghost {
@@ -60,7 +65,7 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-accent-purple to-accent-cyan bg-clip-text text-transparent;
+    @apply text-accent-cyan;
   }
 
   .shimmer {
@@ -87,11 +92,11 @@
   }
 
   .glow-purple {
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+    box-shadow: 0 0 30px rgba(0, 212, 232, 0.15);
   }
 
   .glow-cyan {
-    box-shadow: 0 0 30px rgba(6, 182, 212, 0.15);
+    box-shadow: 0 0 30px rgba(0, 212, 232, 0.15);
   }
 }
 

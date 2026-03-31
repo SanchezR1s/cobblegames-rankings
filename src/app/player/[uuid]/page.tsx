@@ -113,7 +113,7 @@ function DuelMatchRow({ match, myUuid }: { match: DuelMatch; myUuid: string }) {
             {match.opponent_name}
           </Link>
           {match.is_ranked && (
-            <span className="text-[10px] bg-accent-purple/15 text-accent-purple border border-accent-purple/30 px-1.5 py-0.5 rounded font-medium hidden sm:inline">
+            <span className="text-[10px] bg-accent-cyan/15 text-accent-cyan border border-accent-cyan/30 px-1.5 py-0.5 rounded font-medium hidden sm:inline">
               RANKED
             </span>
           )}
@@ -208,7 +208,7 @@ export default async function PlayerPage({
         {/* Stats grid */}
         {hg && (
           <section>
-            <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+            <h2 className="text-xs font-semibold text-accent-cyan uppercase tracking-widest mb-3">
               Hunger Games
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
@@ -224,7 +224,7 @@ export default async function PlayerPage({
 
         {duels && (
           <section>
-            <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+            <h2 className="text-xs font-semibold text-accent-cyan uppercase tracking-widest mb-3">
               Duelos
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
@@ -246,7 +246,7 @@ export default async function PlayerPage({
               className={cn(
                 "px-4 py-2 text-sm font-medium rounded-t-lg border-b-2 transition-colors -mb-px",
                 tab === "hg"
-                  ? "border-accent-purple text-accent-purple bg-accent-purple/5"
+                  ? "border-accent-cyan text-accent-cyan bg-accent-cyan/5"
                   : "border-transparent text-gray-400 hover:text-white"
               )}
             >

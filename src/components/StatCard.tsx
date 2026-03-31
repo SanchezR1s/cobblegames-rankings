@@ -20,7 +20,7 @@ export default function StatCard({
   label,
   value,
   sub,
-  accent = "purple",
+  accent = "cyan",
   icon,
   className,
 }: StatCardProps) {

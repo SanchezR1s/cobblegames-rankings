@@ -3,16 +3,16 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Cobblegames Rankings",
-    template: "%s | Cobblegames Rankings",
+    default: "Cobblemon Arena - Rankings",
+    template: "%s | Cobblemon Arena",
   },
-  description: "Competitive Cobblemon rankings, leaderboards, and player statistics for Cobblegames server.",
-  keywords: ["cobblemon", "minecraft", "rankings", "hunger games", "duels", "leaderboard"],
+  description: "Clasificación competitiva de jugadores en Cobblemon Arena — Hunger Games y Duelos.",
+  keywords: ["cobblemon", "minecraft", "rankings", "hunger games", "duels", "leaderboard", "cobblemon arena"],
   openGraph: {
     type: "website",
-    siteName: "Cobblegames Rankings",
-    title: "Cobblegames Rankings",
-    description: "Competitive Cobblemon rankings and player statistics",
+    siteName: "Cobblemon Arena",
+    title: "Cobblemon Arena - Rankings",
+    description: "Clasificación competitiva de Cobblemon Arena",
   },
 };
 
